@@ -1,0 +1,255 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\PalCheator.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\PalCheator.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 73
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于"
+FONT 9, "Tahoma"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "仙剑奇侠传1995年DOS版存盘修改器 1.0",IDC_STATIC,40,10,
+                    126,8,SS_NOPREFIX
+    LTEXT           "WhoCares 制作，2005.2",IDC_STATIC,40,24,119,8
+    DEFPUSHBUTTON   "晓得了",IDOK,178,7,50,14,WS_GROUP
+    LTEXT           "物品说明根据中国仙剑联盟的资料修改而成",IDC_STATIC,40,
+                    38,131,8
+    LTEXT           "感谢Chris Maunder 的MFC Grid Control",IDC_STATIC,40,52,
+                    119,8
+END
+
+IDD_PALCHEATOR_DIALOG DIALOGEX 0, 0, 377, 243
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "仙剑奇侠传DOS版存盘修改器 v1.0 "
+FONT 9, "Tahoma"
+BEGIN
+    CONTROL         "Tab1",IDC_TAB1,"SysTabControl32",0x0,5,6,367,205
+    PUSHBUTTON      "读取",IDC_BUTTON_READ,211,220,27,14
+    PUSHBUTTON      "退出",IDC_BUTTON_EXIT,277,220,27,14
+    GROUPBOX        "存盘文件选择(进度一对应的文件是1.rpg, 类推)",IDC_STATIC,
+                    5,215,189,24
+    CONTROL         "进度一",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,7,225,37,10
+    CONTROL         "进度二",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,45,225,
+                    37,10
+    CONTROL         "进度三",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,83,225,
+                    37,10
+    CONTROL         "进度四",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,121,225,
+                    37,10
+    CONTROL         "进度五",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON,159,225,
+                    32,10
+    PUSHBUTTON      "帮助",IDC_BUTTON_HELP,310,220,27,14,WS_DISABLED
+    PUSHBUTTON      "关于",IDC_BUTTON_ABOUT,345,220,27,14
+    PUSHBUTTON      "保存",IDC_BUTTON_SAVE,244,220,27,14
+END
+
+IDD_DIALOG_PLAYER DIALOG DISCARDABLE  0, 0, 365, 193
+STYLE WS_CHILD
+FONT 9, "Tahoma"
+BEGIN
+    CONTROL         "角色",IDC_PLAYER_GRID,"MFCGridCtrl",WS_TABSTOP,2,2,361,
+                    168
+    PUSHBUTTON      "恢复原来的值",IDC_BUTTON_RESTORE,254,173,50,14
+    PUSHBUTTON      "设置成推荐值",IDC_BUTTON_RECOMMEND,313,173,50,14
+    LTEXT           "金钱",IDC_STATIC,7,179,19,8
+    EDITTEXT        IDC_EDIT_MONEY,34,176,66,14,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG_RESOURCE DIALOG DISCARDABLE  0, 0, 365, 190
+STYLE WS_CHILD
+FONT 9, "Tahoma"
+BEGIN
+    CONTROL         "物品",IDC_RESOURCE_GRID,"MFCGridCtrl",WS_TABSTOP,3,2,
+                    360,169
+    LTEXT           "已有物品的种数",IDC_STATIC,288,177,49,8
+    EDITTEXT        IDC_EDIT_TOTAL_RESOURCE,340,174,20,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "自动添加极品装备, 删除非极品装备, 不修改剧情道具",
+                    IDC_BUTTON_ELITE_RESOURCE,3,174,165,14
+    PUSHBUTTON      "物品全满",IDC_BUTTON_FULL_RESOURCE,170,174,50,14
+    PUSHBUTTON      "复原",IDC_BUTTON_RESET_RESOURCE,222,174,50,14
+END
+
+IDD_DIALOG_COMMENT DIALOG DISCARDABLE  0, 0, 367, 190
+STYLE WS_CHILD
+FONT 9, "Tahoma"
+BEGIN
+    CONTROL         "说明",IDC_COMMENT_GRID,"MFCGridCtrl",WS_TABSTOP,3,16,
+                    360,173
+    LTEXT           "游戏存盘文件的部分格式说明(注意: 2字节有符号的整数最大是32767, 改得超过此值会变成负数)",
+                    IDC_STATIC,3,3,297,8
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "PalCheator Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "PalCheator\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2005\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "PalCheator.EXE\0"
+            VALUE "ProductName", "PalCheator 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 66
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\PalCheator.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
